@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bask Café</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image" href="asset/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lobster&display=swap"
+      rel="stylesheet" />
+    <style>
+      .toggle-row {
+        display: none;
+      }
+
+      .toggle-row.show {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="main_header">
+      <div class="header_container">
+        <div class="logo">
+          <a href="/">
+            <img src="asset/logo.png" alt="Bask Cafe Logo" id="logo" />
+          </a>
+        </div>
+
+        <nav class="main_nav" id="mainNav">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About Us</a>
+          <a href="/menu.html">Menu</a>
+          <a href="/gallery.html" class="active">Gallery</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/review.php">Review</a>
+        </nav>
+        <div class="hamburger" id="hamburger">☰</div>
+      </div>
+    </header>
+
+    <div class="header_img_container">
+      <img src="asset/index/header_img.png" width="100%" />
+      <div class="header-text">
+        <h1>Café Gallery</h1>
+        <p>A collection of moments, flavors, and stories—experience the essence of Bask Café.</p>
+      </div>
+    </div>
+    <div class="gallery_container">
+      <div class="gallery_header">
+        <h1>Customer's Gallery</h1>
+      </div>
+
+      <div class="gallery_grid">
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/customer/customer1.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/customer/customer2.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/customer/customer3.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/customer/customer4.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/customer/customer5.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/customer/customer6.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery_row toggle-row">
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/customer/customer7.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/customer/customer8.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row toggle-row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/customer/customer9.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/customer/customer10.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="view_all_container">
+        <button class="view_all_button">View All</button>
+      </div>
+    </div>
+
+    <div class="gallery_container">
+      <div class="gallery_header">
+        <h1>Café's ambiance</h1>
+      </div>
+      <div class="gallery_grid">
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/ambiance/ambiance1.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/ambiance/ambiance2.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/ambiance/ambiance3.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/ambiance/ambiance4.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/ambiance/ambiance5.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/ambiance/ambiance6.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row toggle-row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/ambiance/ambiance7.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/ambiance/ambiance8.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row toggle-row">
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/ambiance/ambiance9.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/ambiance/ambiance10.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="view_all_container">
+        <button class="view_all_button">View All</button>
+      </div>
+    </div>
+
+    <div class="gallery_container">
+      <div class="gallery_header">
+        <h1>Our Process</h1>
+      </div>
+
+      <div class="gallery_grid">
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/process/process1.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/process/process2.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_small">
+            <<img src="/asset/gallery/process/process3.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/process/process4.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/process/process5.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/process/process6.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row toggle-row">
+          <div class="gallery_item gallery_item_small">
+            <<img src="/asset/gallery/process/process7.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/process/process8.jpg" />
+          </div>
+        </div>
+        <div class="gallery_row toggle-row">
+          <div class="gallery_item gallery_item_large">
+            <img src="/asset/gallery/process/process9.jpg" />
+          </div>
+          <div class="gallery_item gallery_item_small">
+            <img src="/asset/gallery/process/process10.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="view_all_container">
+        <button class="view_all_button">View All</button>
+      </div>
+    </div>
+    <footer>
+    <div class="footer_container">
+      <div class="footer_content">
+        <div class="logo">
+          <a href="/">
+            <img src="asset/logo.png" alt="Bask Cafe Logo" id = "logo">
+            
+          </a>
+        </div>
+        
+        <nav class="nav_menu">
+            <a href="/about.html">About Us</a>
+            <a href="/menu.html">Menu</a>
+            <a href="/gallery.html">Gallery</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/review.php">Review</a>
+          </nav>
+      </div>
+      
+      <div class="footer_bottom">
+        <div class="copyright">Bask Café&copy; 2025. All rights reserved.</div>
+          <div class="footer_center">Designed & Developed by Aguilar & Cruz</div>
+        <div class="social_icons">
+          <a href="https://www.facebook.com/profile.php?id=61569599993182" aria-label="Facebook" target="_blank">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/baskcafe_/" aria-label="Instagram"target="_blank">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script src="hamburger.js" defer></script>
+    <script src="gallery.js" defer></script>
+  </body>
+</html>

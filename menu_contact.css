@@ -1,0 +1,606 @@
+.menu_container {
+  flex: 1;
+  width: 90%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+}
+
+.menu_header {
+  display: flex;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.menu_title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.menu_subtitle {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  text-align: left;
+}
+
+.category_filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.category_button {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #54574a;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.category_button:hover {
+  background-color: #9ca090;
+  color: #fcf9f4;
+}
+
+.category_button.active {
+  background-color: #54574a;
+  color: #fcf9f4;
+  border: none;
+}
+
+.search_container {
+  position: relative;
+  display: inline-block;
+}
+
+.search_input {
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid #ddd;
+  font-family: "Libre Baskerville", serif;
+  width: 250px;
+  font-size: 0.875rem;
+}
+
+.search_icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #666;
+}
+
+.menu_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  justify-items: center;
+  padding: 0;
+  justify-content: center;
+}
+
+.menu_item {
+  background-color: #efebe2;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 470px;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu_item:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.menu_item_image {
+  margin-bottom: 1rem;
+  max-width: 70%;
+  height: 240px;
+  border-radius: 0.375rem;
+}
+
+.menu_item_category {
+  font-size: 0.875rem;
+  color: #735240;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.menu_item_name {
+  font-size: 1.375rem;
+  margin-bottom: 0.5rem;
+  color: #1a2916;
+  font-weight: 700;
+}
+
+.menu_item_price {
+  font-weight: 600;
+  color: #735240;
+  font-size: 1.25rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.menu_modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_modal_content {
+  background: #efebe2;
+  border-radius: 12px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  max-width: 700px;
+  width: 90vw;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu_modal_close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  color: #54574a;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal_img {
+  width: 40%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.modal_text {
+  width: 55%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#modal_title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+#modal_desc {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #5a3d24;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#modal_price {
+  font-size: 1.5rem;
+  color: #735240;
+  font-weight: bold;
+}
+.category_dropdown {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_section,
+.image_section {
+  background-color: #f5f0e8;
+  padding: 20px;
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+}
+.form_section {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.image_section {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.image_section img {
+  border-radius: 15px;
+}
+
+.form_container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form_group {
+  margin-bottom: 24px;
+}
+
+.form_row {
+  display: flex;
+  gap: 20px;
+}
+
+.form_row .form_group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.input_container {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding-bottom: 4px;
+  outline: none;
+  font-family: "Libre Baskerville", serif;
+}
+
+button {
+  background-color: #4d5548;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Libre Baskerville", serif;
+}
+
+button:hover {
+  background-color: #3d4338;
+}
+
+.image_section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visit_section {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #f5f0e8;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visit_section h3 {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  margin-bottom: 20px;
+}
+
+.info_map {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  max-width: 300px;
+}
+
+.info h3 {
+  font-family: "Lobster", cursive;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #493625;
+}
+
+.info p {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.map img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.contact_icon {
+  width: 25px;
+  fill: #9ca090;
+  margin-right: 8px;
+}
+
+.heading_title h1 {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 0%;
+  height: 1px;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.title_underline {
+  width: 15%;
+  height: 1px;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.social_icon {
+  margin-left: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+}
+
+.social_container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.social_container .social_icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .menu_container {
+    margin: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0%;
+  }
+  .menu_title {
+    font-size: 15px;
+  }
+
+  .menu_subtitle {
+    font-size: 7px;
+    margin-left: auto;
+  }
+  .category_filters {
+    padding: 0%;
+    margin: 0%;
+  }
+  .category_button {
+    display: none;
+  }
+
+  .category_dropdown {
+    display: inline-block !important;
+    width: 40%;
+    font-size: 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #54574a;
+    font-family: "Libre Baskerville", serif;
+    height: 30px;
+    padding: 0 0.3rem;
+    text-align: center;
+  }
+
+  .search_container {
+    flex: 1;
+    width: auto;
+    position: relative;
+  }
+
+  .search_input {
+    height: 30px;
+    width: 100%;
+    font-size: 0.75rem;
+    padding-left: 2rem;
+  }
+
+  .search_icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    left: 0.5rem;
+  }
+  .search_container {
+    width: 250.37px;
+  }
+  .menu_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .menu_grid .menu_item:last-child {
+    grid-column: span 2;
+    justify-self: center;
+  }
+
+  .menu_item {
+    margin-top: 10px;
+    width: 159.24px;
+    height: 170px;
+  }
+
+  .menu_item_image {
+    width: 90px;
+    height: 70px;
+  }
+
+  .menu_item_category {
+    font-size: 8px;
+    margin-top: -15px;
+    margin-bottom: 0px;
+  }
+
+  .menu_item_name {
+    font-size: 10px;
+    margin-bottom: -15px;
+  }
+
+  .menu_item_price {
+    font-size: 10px;
+  }
+
+  .menu_modal_overlay {
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    min-width: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+  }
+  .menu_modal_content {
+    flex-direction: column;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    margin: 20vh auto 0 auto;
+    left: 0;
+    right: 0;
+    width: 96vw;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  body.menu-modal-open {
+    overflow: hidden;
+    width: 100vw;
+    position: fixed;
+  }
+  .modal_img {
+    width: 60vw;
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 0.7rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal_text {
+    width: 100%;
+    gap: 0.3rem;
+    padding: 0 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #modal_title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  #modal_desc {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+  }
+  #modal_price {
+    font-size: 0.95rem;
+  }
+  .menu_modal_close {
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 2rem;
+  }
+}
